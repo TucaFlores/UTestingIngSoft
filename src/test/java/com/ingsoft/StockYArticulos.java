@@ -17,6 +17,5 @@ public class No_Superar_Stock_Disponible {
         }
         Assertions.assertTrue(flag);
     }
-
-
+    
 }
