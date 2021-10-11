@@ -16,8 +16,8 @@ class StockYArticulos {
         DetalleCarrito detalleCarrito2 = new DetalleCarrito(articulo2,2);
 
         Carrito carrito = new Carrito();
-        carrito.addDetalles(detalleCarrito1);
-        carrito.addDetalles(detalleCarrito2);
+        carrito.getDetalles().add(detalleCarrito1);
+        carrito.getDetalles().add(detalleCarrito2);
 
         boolean flag=false;
         for(int i = 0; i<carrito.getDetalles().size();i++){
@@ -38,8 +38,8 @@ class StockYArticulos {
         DetalleCarrito detalleCarrito2 = new DetalleCarrito(articulo2,2);
 
         Carrito carrito = new Carrito();
-        carrito.addDetalles(detalleCarrito1);
-        carrito.addDetalles(detalleCarrito2);
+        carrito.getDetalles().add(detalleCarrito1);
+        carrito.getDetalles().add(detalleCarrito2);
 
 
         boolean flag=false;

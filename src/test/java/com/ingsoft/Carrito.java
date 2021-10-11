@@ -25,7 +25,4 @@ public class Carrito {
         return montoTotal;
     }
 
-    public void addDetalles(DetalleCarrito detalleCarrito) {
-        this.detalles.add(detalleCarrito);
-    }
 }
