@@ -3,19 +3,53 @@ package com.ingsoft;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
-public class No_Superar_Stock_Disponible {
 
 
-    private Articulo  articulo= new Articulo("Helado",5,4.5);
+class StockYArticulos {
 
     @Test
-    public void controlarStockDiponible(){
-        int cantArticuloSeleccionado = 5;
+    public void controlarStockDiponible(){//Que la cantidad de artículos seleccionado esten disponibles por dicho articulo
+        Articulo  articulo1= new Articulo("Helado",5,4.5);
+        Articulo  articulo2= new Articulo("Cafe",5,10);
+
+        DetalleCarrito detalleCarrito1 = new DetalleCarrito(articulo1,3);
+        DetalleCarrito detalleCarrito2 = new DetalleCarrito(articulo2,2);
+
+        Carrito carrito = new Carrito();
+        carrito.addDetalles(detalleCarrito1);
+        carrito.addDetalles(detalleCarrito2);
+
         boolean flag=false;
-        if(cantArticuloSeleccionado<=articulo.getStock()){
-            flag = true;
+        for(int i = 0; i<carrito.getDetalles().size();i++){
+            flag = false;
+            if (carrito.getDetalles().get(i).getCantArticulo()<=carrito.getDetalles().get(i).getArticulo().getStock()){
+                flag = true;
+            }
         }
         Assertions.assertTrue(flag);
     }
-    
+
+    @Test
+    public void controlarSeleccionArticulos(){//La cantidad de articulos seleccionados no puede ser <1
+        Articulo  articulo1= new Articulo("Helado",5,4.5);
+        Articulo  articulo2= new Articulo("Cafe",5,10);
+
+        DetalleCarrito detalleCarrito1 = new DetalleCarrito(articulo1,3);
+        DetalleCarrito detalleCarrito2 = new DetalleCarrito(articulo2,2);
+
+        Carrito carrito = new Carrito();
+        carrito.addDetalles(detalleCarrito1);
+        carrito.addDetalles(detalleCarrito2);
+
+
+        boolean flag=false;
+        for(int i = 0; i<carrito.getDetalles().size();i++){
+            flag = false;
+            if(carrito.getDetalles().get(i).getCantArticulo()>1){
+                flag = true;
+            }
+        }
+
+        Assertions.assertTrue(flag);
+    }
 }
