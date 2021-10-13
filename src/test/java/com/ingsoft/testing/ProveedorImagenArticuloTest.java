@@ -1,12 +1,14 @@
-package com.ingsoft;
+package com.ingsoft.testing;
 
+import com.ingsoft.entities.Articulo;
+import com.ingsoft.entities.Proveedor;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
-public class ProveedorImagenArticulo {
+public class ProveedorImagenArticuloTest {
 
     @Test
-    public void imagenArticuloTest(){
+    public void imagenArticulo(){
         //Revisamos que un articulo tenga imagen
 
         Articulo articulo = new Articulo();
@@ -23,7 +25,7 @@ public class ProveedorImagenArticulo {
     }
 
     @Test
-    public void proveedorArticuloTest(){
+    public void proveedorArticulo(){
         //Revisamos que el articulo tenga un proveedor
 
         Articulo articulo = new Articulo();

@@ -1,20 +1,21 @@
-package com.ingsoft;
+package com.ingsoft.testing;
 
+import com.ingsoft.entities.DetalleCarrito;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
-public class CantidadDetalleCarrito {
+public class CantidadDetalleCarritoTest {
 
     @Test
-    public void cantidadDetalleCarritoTest(){
+    public void cantidadDetalleCarrito(){
         //Revisamos que el detalle del carrito tenga una cantidad
 
         DetalleCarrito detalleCarrito = new DetalleCarrito();
-        detalleCarrito.setCantidad(5);
+        detalleCarrito.setCantArticulo(5);
 
         boolean flag;
 
-        if (detalleCarrito.getCantidad() > 0){
+        if (detalleCarrito.getCantArticulo() > 0){
             flag = true;
         }else {
             flag = false;

@@ -1,12 +1,13 @@
-package com.ingsoft;
+package com.ingsoft.testing;
 
+import com.ingsoft.entities.Usuario;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
-public class DniCliente {
+public class DniClienteTest {
 
     @Test
-    public void dniClienteTest(){
+    public void dniCliente(){
         //Revisamos que el cliente tenga dni
 
         Usuario cliente = new Usuario();

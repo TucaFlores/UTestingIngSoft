@@ -1,12 +1,13 @@
-package com.ingsoft;
+package com.ingsoft.testing;
 
+import com.ingsoft.entities.Articulo;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
-public class PrecioNombreArticulo {
+public class PrecioNombreArticuloTest {
 
     @Test
-    public void nombreArticuloTest(){
+    public void nombreArticulo(){
         //Revisamos que un articulo tenga nombre
 
         Articulo articulo = new Articulo();
@@ -23,7 +24,7 @@ public class PrecioNombreArticulo {
     }
 
     @Test
-    public void precioArticuloTest(){
+    public void precioArticulo(){
         //Revisamos que un articulo tenga precio mayor a 0
 
         Articulo articulo = new Articulo();

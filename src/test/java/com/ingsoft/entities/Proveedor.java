@@ -1,4 +1,4 @@
-package com.ingsoft;
+package com.ingsoft.entities;
 
 public class Proveedor {
 

@@ -1,4 +1,4 @@
-package com.ingsoft;
+package com.ingsoft.entities;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
